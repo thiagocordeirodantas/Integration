@@ -22,9 +22,16 @@ describe('Testes do carrinho', () => {
     expect(carrinho.itens).toContain(item);
     expect(carrinho.itens).toContain(item2);
   });
-    it('Deve ter a propridade "total" na inicializacao', () => {
-        const carrinho = new Carrinho();
-        expect(carrinho).toHaveProperty('total');
-    })
-});
+  it('Deve ter a propridade "total" na inicializacao', () => {
+    const carrinho = new Carrinho();
+    expect(carrinho).toHaveProperty('total');
+  });
 
+  it('Deve dizer o erro ao finalizar compra com carrinho vazio', () => {
+    function englobaCarrinho(){
+      const carrinho = new Carrinho();
+      carrinho.finalizaCompra();
+    }
+    expect(englobaCarrinho).toThrowError('Carrinho de compras vazio')
+  })
+});

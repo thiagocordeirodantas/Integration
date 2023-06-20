@@ -1,4 +1,4 @@
-class Carrinho {
+export class Carrinho {
   constructor() {
     this.itens = [];
     this.subtotal = null;
