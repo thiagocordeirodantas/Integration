@@ -1,4 +1,4 @@
-class Item {
+export class Item {
   constructor(nome, valor, quantidade) {
     this.nome = nome;
     this.valor = valor;
